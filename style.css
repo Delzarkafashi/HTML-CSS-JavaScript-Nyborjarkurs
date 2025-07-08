@@ -81,3 +81,53 @@ ul {
   list-style-type: none;
   padding: 0;
 }
+
+form {
+  max-width: 500px;
+  margin: 30px auto;
+  text-align: left;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+textarea {
+  max-width: 100%;
+  min-width: 300px; 
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+button[type="submit"] {
+  background-color: #00509e;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #003f7f;
+}
+
+#bekräftelse {
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+}
