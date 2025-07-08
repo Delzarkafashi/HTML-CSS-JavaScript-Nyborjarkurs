@@ -14,18 +14,45 @@
       <li><a href="kontakt.html">Kontakt</a></li>
     </ul>
   </nav>
+
   <main>
     <h1>Kontakt</h1>
 
-    <p>Du kan nå mig via följande kontaktuppgifter:</p>
-
+    <p>Ni kan nå mig via följande kontaktuppgifter:</p>
     <ul>
       <li><strong>E-post:</strong> exempel@mail.se</li>
       <li><strong>Telefon:</strong> 070-123 45 67</li>
       <li><strong>Adress:</strong> Exempelgatan 12, 123 45 Exempelstad</li>
     </ul>
 
-    <p>Jag försöker svara så snabbt som möjligt.</p>
+
+    <h2>Lämna era kontakt information här så kontaker jag er!</h2>
+    <form onsubmit="skickaMeddelande(event)">
+      <label for="namn">Namn:</label><br>
+      <input type="text" id="namn" required><br><br>
+
+      <label for="meddelande">Meddelande:</label><br>
+      <textarea id="meddelande" rows="4" required></textarea><br><br>
+
+      <button type="submit">Skicka</button>
+    </form>
+
+    <p id="bekräftelse" style="color: green; margin-top: 20px;"></p>
   </main>
+
+  <script>
+    function skickaMeddelande(event) {
+      event.preventDefault(); 
+
+      let namn = document.getElementById("namn").value;
+      let meddelande = document.getElementById("meddelande").value;
+
+      document.getElementById("bekräftelse").innerText =
+        "Tack, " + namn + "! Ditt meddelande har skickats.";
+
+      document.getElementById("namn").value = "";
+      document.getElementById("meddelande").value = "";
+    }
+  </script>
 </body>
 </html>
