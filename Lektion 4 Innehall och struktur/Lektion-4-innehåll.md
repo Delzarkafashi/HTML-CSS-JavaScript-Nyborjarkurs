@@ -5,7 +5,8 @@ Lägg in riktig information på alla sidor:
 - cv.html: tidigare utbildning & erfarenhet (t.ex. i lista)
 - personligtbrev.html: kort text om dig
 - kontakt.html: enkel kontakttext (ev. förbereda for formular)
-- ovningar.html: förklarar vad övningar är
-Använd rätt HTML-element:
+Övningar: 
+- förklarar vad övningar är
+- Använd rätt HTML-element:
 <h1>, <h2>, <p>, <ul>, <li>, <img>
-Se till att varje sida har ett tydligt innehåll och rubriker.
+- Se till att varje sida har ett tydligt innehåll och rubriker.
