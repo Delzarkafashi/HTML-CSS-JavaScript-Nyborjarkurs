@@ -1,133 +1,48 @@
+* { box-sizing: border-box; }
+html, body { height: 100%; }
 body {
   margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
-  color: #333;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #f2f5f7;
 }
 
-nav {
-  background-color: #003366;
-  padding: 15px 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+.wrapper {
+  max-width: 1000px;
+  margin: 24px auto;
+  padding: 0 12px;
 }
 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
+.parent {
+  display: grid;
+  grid-template-columns: 0.5fr repeat(10, 1fr) 0.5fr;
+  grid-template-rows: repeat(12, minmax(100px, auto));
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+  background: #fff;
 }
 
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
-  padding: 8px 12px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
+.header         { grid-area: 1 / 2 / 4 / 12;  background:#e9f4fb; } /* ljusblå topp */
+.jobberfarenhet { grid-area: 4 / 2 / 7 / 12;  background:#ffffff; } /* vit */
+.utbildning     { grid-area: 7 / 2 / 10 / 12; background:#f5fafe; } /* ljusgrå-blå */
+.footer         { grid-area: 10 / 2 / 13 / 12; background:#e9f4fb; } /* samma som topp */
 
-nav ul li a:hover {
-  background-color: #0055aa;
-}
+.sid1 { grid-area: 1 / 1 / 4 / 2;   background:#ffffff; }
+.sid2 { grid-area: 4 / 1 / 7 / 2;   background:#e1f8e3; }
+.sid3 { grid-area: 7 / 1 / 10 / 2;  background:#ffffff; }
+.sid4 { grid-area: 10 / 1 / 13 / 2; background:#e1f8e3; }
 
-main {
-  max-width: 800px;
-  margin: 30px auto;
-  padding: 20px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  text-align: center;
-}
+.sid5 { grid-area: 1 / 12 / 4 / 13;  background:#ffffff; }
+.sid6 { grid-area: 4 / 12 / 7 / 13;  background:#e1f8e3; }
+.sid7 { grid-area: 7 / 12 / 10 / 13; background:#ffffff; }
+.sid8 { grid-area: 10 / 12 / 13 / 13; background:#e1f8e3; }
 
-h1 {
-  color: #004080;
-  font-size: 36px;
-}
-
-h2, h3 {
-  color: #0066cc;
-}
-
-p {
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-img {
-  max-width: 300px;
-  height: auto;
-  margin: 20px 0;
-  border-radius: 10px;
-}
-
-footer {
-  text-align: center;
-  padding: 15px;
-  background-color: #004080;
-  color: white;
-  margin-top: 30px;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-form {
-  max-width: 500px;
-  margin: 30px auto;
-  text-align: left;
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-input[type="text"],
-textarea {
-  max-width: 100%;
-  min-width: 300px; 
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-  box-sizing: border-box;
-}
-
-button[type="submit"] {
-  background-color: #00509e;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  font-size: 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button[type="submit"]:hover {
-  background-color: #003f7f;
-}
-
-#bekräftelse {
-  text-align: center;
-  font-weight: bold;
-  font-size: 18px;
+.header,
+.jobberfarenhet,
+.utbildning,
+.footer {
+  border-top: 1px solid rgba(0,0,0,.06);
 }
