@@ -30,7 +30,7 @@ body {
 .jobberfarenhet { grid-area: 4 / 2 / 7 / 12;  background:#ffffff; }
 .utbildning     { grid-area: 7 / 2 / 9 / 12;  background:#f5fafe; }
 .egenskaper { grid-area: 9 / 2 / 12 / 12; background:#ffffff;}
-.footer         { grid-area: 12 / 2 / 13 / 12; background:#e9f4fb; }
+.personligtbrev        { grid-area: 12 / 2 / 13 / 12; background:#e9f4fb; }
 
 /* Sidokolumner */
 .sid1 { grid-area: 1 / 1 / 4 / 2;   background:#ffffff; }
@@ -337,4 +337,15 @@ body {
   .contact-list li::before{ position: static; margin-right: 6px; }
 }
 
+/* ===== layout för innehållet i personlig brev ===== */
+.personligtbrev { 
+  padding: 28px 36px;
+  border-top: 1px solid rgba(0,0,0,.06);
+}
 
+.header,
+.jobberfarenhet,
+.utbildning,
+.personligtbrev {
+  border-top: 1px solid rgba(0,0,0,.06);
+}
