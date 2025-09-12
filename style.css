@@ -15,7 +15,7 @@ body {
 .parent {
   display: grid;
   grid-template-columns: 0.5fr repeat(10, 1fr) 0.5fr;
-  grid-template-rows: repeat(12, minmax(100px, auto));
+  grid-template-rows: repeat(12, minmax(10px, auto));
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 
@@ -25,10 +25,10 @@ body {
   background: #fff;
 }
 
-.header         { grid-area: 1 / 2 / 4 / 12;  background:#e9f4fb; } /* ljusblå topp */
-.jobberfarenhet { grid-area: 4 / 2 / 7 / 12;  background:#ffffff; } /* vit */
-.utbildning     { grid-area: 7 / 2 / 10 / 12; background:#f5fafe; } /* ljusgrå-blå */
-.footer         { grid-area: 10 / 2 / 13 / 12; background:#e9f4fb; } /* samma som topp */
+.header         { grid-area: 1 / 2 / 4 / 12;  background:#e9f4fb; }
+.jobberfarenhet { grid-area: 4 / 2 / 7 / 12;  background:#ffffff; }
+.utbildning     { grid-area: 7 / 2 / 10 / 12; background:#f5fafe; } 
+.footer         { grid-area: 10 / 2 / 13 / 12; background:#e9f4fb; } 
 
 .sid1 { grid-area: 1 / 1 / 4 / 2;   background:#ffffff; }
 .sid2 { grid-area: 4 / 1 / 7 / 2;   background:#e1f8e3; }
@@ -45,4 +45,95 @@ body {
 .utbildning,
 .footer {
   border-top: 1px solid rgba(0,0,0,.06);
+}
+
+
+/* ===== layout för innehållet i .header ===== */
+.header-inner {
+  display: flex;
+  align-items: center;      
+  justify-content: flex-start; 
+  gap: 60px;                
+  padding: 28px 36px;
+}
+
+.avatar {
+  width: 180px;           
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid rgba(255,255,255,.7);
+}
+
+.info {
+  flex: 1;                   
+}
+
+.info h1 {
+  margin: 0 0 6px 0;
+  font-size: 36px;         
+  font-weight: 800;
+}
+
+.info .role {
+  margin: 0 0 14px 0;
+  font-size: 14px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  color: #58626b;
+}
+
+.contact {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contact li {
+  font-size: 15px;
+  position: relative;
+  padding-left: 16px;
+}
+.contact li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: .7;
+}
+/* ===== Responsiv header ===== */
+
+@media (max-width: 900px){
+  .header-inner { gap: 36px; padding: 24px 28px; }
+  .avatar { width: 150px; height: 150px; }
+  .info h1 { font-size: 30px; }
+  .info .role { letter-spacing: 2px; }
+  .contact li { font-size: 14px; }
+}
+
+@media (max-width: 680px){
+  .header-inner{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    padding: 20px 18px;
+  }
+  .avatar { width: 120px; height: 120px; }
+  .info { flex: initial; width: 100%; }
+  .info h1 { font-size: 26px; }
+  .info .role { font-size: 12px; letter-spacing: 2px; margin-bottom: 10px; }
+
+  .contact { align-items: center; gap: 6px; }
+  .contact li { padding-left: 0; }
+  .contact li::before { content: none; }
+}
+
+@media (max-width: 420px){
+  .avatar { width: 100px; height: 100px; }
+  .info h1 { font-size: 22px; }
+  .contact li { font-size: 13px; }
 }
