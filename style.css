@@ -25,21 +25,24 @@ body {
   background: #fff;
 }
 
+/* Sektioner */
 .header         { grid-area: 1 / 2 / 4 / 12;  background:#e9f4fb; }
 .jobberfarenhet { grid-area: 4 / 2 / 7 / 12;  background:#ffffff; }
-.utbildning     { grid-area: 7 / 2 / 10 / 12; background:#f5fafe; } 
-.footer         { grid-area: 10 / 2 / 13 / 12; background:#e9f4fb; } 
+.utbildning     { grid-area: 7 / 2 / 9 / 12;  background:#f5fafe; }
+.egenskaper { grid-area: 9 / 2 / 12 / 12; background:#ffffff;}
+.footer         { grid-area: 12 / 2 / 13 / 12; background:#e9f4fb; }
 
+/* Sidokolumner */
 .sid1 { grid-area: 1 / 1 / 4 / 2;   background:#ffffff; }
 .sid2 { grid-area: 4 / 1 / 7 / 2;   background:#e1f8e3; }
-.sid3 { grid-area: 7 / 1 / 10 / 2;  background:#ffffff; }
-.sid4 { grid-area: 10 / 1 / 13 / 2; background:#e1f8e3; }
-
-.sid5 { grid-area: 1 / 12 / 4 / 13;  background:#ffffff; }
-.sid6 { grid-area: 4 / 12 / 7 / 13;  background:#e1f8e3; }
-.sid7 { grid-area: 7 / 12 / 10 / 13; background:#ffffff; }
-.sid8 { grid-area: 10 / 12 / 13 / 13; background:#e1f8e3; }
-
+.sid3 { grid-area: 7 / 1 / 9 / 2;   background:#ffffff; }
+.sid4 { grid-area: 9 / 1 / 13 / 2;  background:#e1f8e3; }
+.sid5 { grid-area: 1 / 12 / 4 / 13; background:#ffffff; }
+.sid6 { grid-area: 4 / 12 / 7 / 13; background:#e1f8e3; }
+.sid7 { grid-area: 7 / 12 / 9 / 13; background:#ffffff; }
+.sid8 { grid-area: 9 / 12 / 13 / 13;background:#e1f8e3; }
+.sid9 { grid-area: 12 / 1 / 13 / 2; background:#ffffff; } 
+.sid10{ grid-area: 12 / 12 / 13 / 13; background:#ffffff; } 
 .header,
 .jobberfarenhet,
 .utbildning,
@@ -244,7 +247,7 @@ body {
   line-height: 1.5;
 }
 
-/* Responsivt – samma som jobberfarenhet */
+/*=====  Responsivt –  jobberfarenhet ===== */
 @media (max-width: 680px) {
   .utbildning h2 {
     text-align: center;
@@ -260,4 +263,78 @@ body {
     text-align: center;
   }
 }
+
+/* ===== layout för innehållet i egenskaper ===== */
+
+.egenskaper {
+  grid-area: 9 / 2 / 12 / 12;        
+  background:#ffffff;
+  padding: 28px 36px;
+  border-top: 1px solid rgba(0,0,0,.06);
+}
+
+.egenskaper h2{
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #004080;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.egenskaper-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+}
+
+.egenskaper .col h3{
+  margin: 0 0 12px 0;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .3px;
+}
+
+.bullets{
+  margin: 0;
+  padding-left: 18px;
+  line-height: 1.6;
+  color:#333;
+  font-size: 14px;
+}
+
+.contact-list{
+  /* list-style: none; */
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+  font-size: 14px;
+}
+.contact-list a{
+  color: #1f2937;
+  text-decoration: none;
+}
+.contact-list a:hover{
+  text-decoration: underline;
+}
+
+.egenskaper .col + .col{
+  border-left: 1px solid rgba(0,0,0,.1);
+  padding-left: 24px;
+}
+
+/* ===== egenskaper responsivt ===== */
+@media (max-width: 900px){
+  .egenskaper-grid{ grid-template-columns: 1fr 1fr; }
+  .egenskaper .col:nth-child(2){ border-left: 1px solid rgba(0,0,0,.1); }
+}
+@media (max-width: 640px){
+  .egenskaper h2{ text-align: left; }  
+  .egenskaper-grid{ grid-template-columns: 1fr; gap: 16px; }
+  .egenskaper .col{ padding: 0; }
+  .egenskaper .col::before{ display: none; }
+  .contact-list{ text-align: left; }     
+  .contact-list li{ padding-left: 0; }
+  .contact-list li::before{ position: static; margin-right: 6px; }
+}
+
 
