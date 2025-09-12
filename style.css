@@ -137,3 +137,71 @@ body {
   .info h1 { font-size: 22px; }
   .contact li { font-size: 13px; }
 }
+
+/* ===== layout för innehållet i Jobberfarenhet ===== */
+.jobberfarenhet {
+  padding: 28px 36px;
+}
+
+.jobberfarenhet h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #004080;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.experience {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.experience .year {
+  font-weight: bold;
+  color: #666;
+  font-size: 14px;
+}
+
+.experience h3 {
+  margin: 0 0 6px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+}
+
+.experience p {
+  margin: 0;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.5;
+}
+/* ===== Jobberfarenhet responsivt ===== */
+@media (max-width: 680px) {
+  .jobberfarenhet h2 {
+    text-align: center; 
+  }
+
+  .experience {
+    grid-template-columns: 1fr; 
+    text-align: center;
+  }
+
+  .experience .year {
+    margin-bottom: 6px;
+    font-size: 14px;
+    display: block;
+    text-align: center; 
+  }
+
+  .experience h3 {
+    font-size: 16px;
+  }
+
+  .experience p {
+    font-size: 14px;
+  }
+}
+
+
