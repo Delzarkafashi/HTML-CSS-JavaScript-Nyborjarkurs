@@ -61,12 +61,12 @@ body {
 }
 
 .avatar {
-  width: 180px;           
-  height: 180px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid rgba(255,255,255,.7);
+  width: 120px;
+  height: auto;  
+  border-radius: 30px; 
+  object-fit: contain;
 }
+
 
 .info {
   flex: 1;                   
