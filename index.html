@@ -1,27 +1,177 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <meta charset="UTF-8">
-  <title>Hem</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>En sida – Grid mockup</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="index.html">Hem</a></li>
-      <li><a href="cv-personlig-brev.html">CV & Personligt brev</a></li>
-      <li><a href="projekt.html">Projekt</a></li>
-      <li><a href="kontakt.html">Kontakt</a></li>
-    </ul>
-  </nav>
-  <main>
-    <h1>Välkommen!</h1>
+  <div class="wrapper">
+    <div class="parent">      
+      <div class="header">
+        <div class="header-inner">
+          <img class="avatar" src="bilder/jagochmat1.JPG" alt="Delzar Kafashi">
+          <div class="info">
+            <h1>DELZAR KAFASHI</h1>
+            <p class="role">SYSTEMUTVECKLARE</p>
+            <ul class="contact">
+              <li>+46 70-922 40 98</li>
+              <li>Delzarkafashi@gmail.se</li>
+            </ul>
+          </div>
+        </div>
+        <nav class="menu">
+          <ul>
+            <li><a href="#jobberfarenhet">Jobberfarenhet</a></li>
+            <li><a href="#utbildning">Utbildning</a></li>
+            <li><a href="#egenskaper">Egenskaper</a></li>
+            <li><a href="#personligtbrev">Personligt brev</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="jobberfarenhet" id="jobberfarenhet">
+        <h2>Jobberfarenhet</h2>
 
-    <img src="bilder/delzar.jpg" alt="Bild på Delzar Kafashi" width="300">
+        <div class="experience">
+          <span class="year">2025 – Pågående</span>
+          <div>
+            <h3>Cirkelledare – Studieförbundet</h3>
+              <p>
+                Mitt uppdrag är att undervisa i webbutveckling (HTML, CSS, JavaScript) 
+                och programmering i C#, samt andra kurser utifrån behov. 
+                Jag ska även stöttar föreningar, företag o mm med administrativa uppgifter.
+              </p>
 
-    <p>Hej! Jag heter Delzar Kafashi och är utbildad som systemutvecklare. Jag tycker om att koda, för det är som att genom ord skapa liv. Varje steg i processen är spännande för man ser hur allt växer fram och blir till något större.</p>
+          </div>
+        </div>
+        <div class="experience">
+          <span class="year">2004 – Pågånde</span>
+          <div>
+            <h3>LSS – Kinda kommun</h3>
+            <p>Lång erfarenhet inom vård och omsorg med fokus på stöd till personer med funktionsvariationer.</p>
+          </div>
+        </div>
+        <div class="experience">
+          <span class="year">Tidigare</span>
+          <div>
+            <h3>Egenföretagare – Restaurang</h3>
+            <p>Drivit och ansvarat för egen restaurang med fokus på kundservice, ekonomi och ledarskap.</p>
+          </div>
+        </div>
+      </div>
+      <div class="utbildning" id="utbildning">
+        <h2>Utbildning</h2>
 
-    <p>Som ni ser på bilden så älskar jag mat 😉</p>
-  </main>
+        <div class="edu">
+          <span class="year">2025 – Pågående</span>
+          <div>
+            <h3>Fullstackutvecklare JavaScript</h3>
+            <p>
+              Pågående utbildning med fokus på JavaScript, Node.js, React, databaser och moderna webbramverk.
+              Startade september 2025.
+            </p>
+          </div>
+        </div>
+        <div class="edu">
+          <span class="year">2023 – 2025</span>
+          <div>
+            <h3>Systemutvecklare .NET – TUC Yrkeshögskola</h3>
+            <p>
+              Avslutad YH-utbildning med kurser inom bl.a. C#, .NET, databasutveckling,
+              webbutveckling, IT-säkerhet, test och UX. 
+              Innehöll även praktik (LIA) och examensarbete.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="egenskaper" id="egenskaper">
+        <h2>Egenskaper</h2>
+
+        <div class="egenskaper-grid">
+          <div class="col">
+            <h3>Kunskapsområden</h3>
+            <ul class="bullets">
+              <li>Kommunikation och affärsmannaskap</li>
+              <li>Programmering grund</li>
+              <li>JavaScript & HTML (webbutveckling)</li>
+              <li>Informationsarkitektur & databasutveckling</li>
+              <li>Programmering fördjupning (C# / .NET)</li>
+              <li>IT-säkerhet för utvecklare</li>
+              <li>Webbapplikationer & mobil utveckling</li>
+              <li>Publiceringsverktyg & UX</li>
+              <li>Test, verifiering & certifiering</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>Språk</h3>
+            <ul class="bullets">
+              <li>Svenska (Flytande)</li>
+              <li>Engelska (Flytande)</li>
+              <li>Kurdisk(a) (Flytande)</li>
+              <li>Persiska (Flytande)</li>
+              <li>Turkiska (Grundläggande)</li>
+              <li>Dari (Grundläggande)</li>
+              <li>Pashto (Grundläggande)</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>Kontakt</h3>
+            <ul class="contact-list">
+              <li>070-922 40 98</li>
+              <li><a href="mailto:Delzarkafashi@gmail.se">Delzarkafashi@gmail.se</a></li>
+              <li> Grönegatan 7<br>590 37 Kisa<br>Lägenhetsnummer 0901</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="personligtbrev" id="personligtbrev">
+        <h2>Personligt brev</h2>
+        <p>
+          <p>Hej!</p>
+          Jag har ett stort intresse för systemutveckling.
+          Jag brinner för att lösa problem med kod och ser programmering som ett kreativt sätt
+          att bygga något meningsfullt. Att få se en idé växa fram till en fungerande applikation
+          är något jag verkligen tycker om.
+        </p>
+        <p>
+          Jag är nyfiken, självgående och gillar att lära mig nya tekniker. På fritiden
+          experimenterar jag gärna med små webbsidor eller fördjupar mig i JavaScript och hur man
+          bygger interaktiva funktioner.
+        </p>
+        <p>
+          Jag söker nu möjligheter att utvecklas inom IT och bidra med mina kunskaper i praktiska projekt.
+        </p>
+      </div>
+      <div class="sid1"></div>
+      <div class="sid2"></div>
+      <div class="sid3"></div>
+      <div class="sid4"></div>
+
+      <div class="sid5"></div>
+      <div class="sid6"></div>
+      <div class="sid7"></div>
+      <div class="sid8"></div>
+      <div class="sid9"></div> 
+      <div class="sid10"></div>
+    </div>
+  </div>
+  <button id="toTopBtn" title="Till toppen">⬆</button>
+  <script>
+let toTopBtn = document.getElementById("toTopBtn");
+
+window.onscroll = function() {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    toTopBtn.style.display = "block";
+  } else {
+    toTopBtn.style.display = "none";
+  }
+};
+
+toTopBtn.onclick = function() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+
 </body>
 </html>
