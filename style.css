@@ -415,3 +415,54 @@ html {
   transform: translateY(-3px);   
 }
 
+/* ===== layout för innehållet i peojects===== */
+.projects {
+  display: grid;
+  gap: 20px;
+  margin-top: 16px;
+}
+
+.project {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 16px;
+}
+
+.project .year {
+  font-weight: bold;
+  color: #666;
+  font-size: 14px;
+}
+
+.project h3 {
+  margin: 0 0 6px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.project h3 a {
+  text-decoration: none;
+  color: #0b5bd3;
+}
+.project h3 a:hover {
+  text-decoration: underline;
+}
+
+.project p {
+  margin: 0;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* responsivt */
+@media (max-width: 680px){
+  .project { 
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .project .year { 
+    text-align: center;
+    margin-bottom: 6px;
+  }
+}
