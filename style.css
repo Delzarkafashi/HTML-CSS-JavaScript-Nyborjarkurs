@@ -455,6 +455,102 @@ html {
   line-height: 1.5;
 }
 
+.projects h2{
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #004080;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.links{
+  margin-top: 8px;
+}
+
+.proj-link{
+  position: relative;
+  font-weight: 600;
+  color: #004080;
+  text-decoration: none;
+  padding-bottom: 2px;           
+}
+
+.proj-link + .proj-link::before{
+  content: "•";
+  color: #9ca3af;
+  margin: 0 10px 0 8px;
+}
+
+.proj-link::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background: #cfe8ff;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .25s ease;
+}
+.proj-link:hover::after{
+  transform: scaleX(1);
+}
+
+.proj-link .ext{
+  margin-left: 6px;
+  font-size: .9em;
+  opacity: .7;
+}
+.project .links{
+  margin-left: 18px;  
+}
+
+details > summary{
+  display: inline-flex;             
+  align-items: center;
+  gap: 6px;
+  position: relative;
+  padding: 4px 6px 4px 18px;         
+  border-radius: 6px;
+  cursor: pointer;
+  color: #004080;
+  font-weight: 600;
+  background: transparent;
+  transition: background .2s ease, box-shadow .2s ease, color .2s ease;
+}
+
+details > summary:hover{
+  background: #cfe8ff;
+  box-shadow: 0 0 0 3px rgba(207,232,255,.5) inset;
+}
+details[open] > summary{
+  background: #e9f4fb;
+  color: #003366;
+}
+
+details > summary::marker,
+details > summary::-webkit-details-marker{ display:none; }
+
+details > summary::before{
+  content:"";
+  position:absolute;
+  left:6px; top:50%;
+  width:0; height:0;
+  border-style:solid;
+  border-width:5px 0 5px 7px;
+  border-color:transparent transparent transparent #004080;
+  transform:translateY(-50%) rotate(0deg);
+  transition: transform .2s ease, border-left-color .2s ease;
+}
+details[open] > summary::before{
+  transform:translateY(-50%) rotate(90deg);
+}
+details > summary:hover::before{
+  border-left-color:#0b5bd3;
+}
+
+
 /* responsivt */
 @media (max-width: 680px){
   .project { 
@@ -464,5 +560,11 @@ html {
   .project .year { 
     text-align: center;
     margin-bottom: 6px;
+  }
+  .proj-link + .proj-link::before{
+    margin: 0 8px;
+  }
+  .project .links{ 
+      margin-left: 18px; 
   }
 }
