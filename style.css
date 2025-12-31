@@ -15,7 +15,7 @@ body {
 .parent {
   display: grid;
   grid-template-columns: 0.5fr repeat(10, 1fr) 0.5fr;
-  grid-template-rows: repeat(12, minmax(10px, auto));
+  grid-template-rows: repeat(14, minmax(10px, auto));
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 
@@ -30,19 +30,20 @@ body {
 .jobberfarenhet { grid-area: 4 / 2 / 7 / 12;  background:#ffffff; }
 .utbildning     { grid-area: 7 / 2 / 9 / 12;  background:#f5fafe; }
 .egenskaper { grid-area: 9 / 2 / 12 / 12; background:#ffffff;}
-.personligtbrev        { grid-area: 12 / 2 / 13 / 12; background:#e9f4fb; }
+.personligtbrev { grid-area: 12 / 2 / 13 / 12; background:#f5fafe; }
+.referenser     { grid-area: 13 / 2 / 14 / 12; background:#ffffff; }
 
 /* Sidokolumner */
 .sid1 { grid-area: 1 / 1 / 4 / 2;   background:#ffffff; }
 .sid2 { grid-area: 4 / 1 / 7 / 2;   background:#e1f8e3; }
 .sid3 { grid-area: 7 / 1 / 9 / 2;   background:#ffffff; }
-.sid4 { grid-area: 9 / 1 / 13 / 2;  background:#e1f8e3; }
+.sid4  { grid-area: 9 / 1 / 14 / 2;  background:#e1f8e3; }
 .sid5 { grid-area: 1 / 12 / 4 / 13; background:#ffffff; }
 .sid6 { grid-area: 4 / 12 / 7 / 13; background:#e1f8e3; }
 .sid7 { grid-area: 7 / 12 / 9 / 13; background:#ffffff; }
-.sid8 { grid-area: 9 / 12 / 13 / 13;background:#e1f8e3; }
-.sid9 { grid-area: 12 / 1 / 13 / 2; background:#ffffff; } 
-.sid10{ grid-area: 12 / 12 / 13 / 13; background:#ffffff; } 
+.sid8  { grid-area: 9 / 12 / 14 / 13; background:#e1f8e3; }
+.sid9  { grid-area: 12 / 1 / 13 / 2; background:#ffffff; } 
+.sid10 { grid-area: 12 / 12 / 13 / 13; background:#ffffff; } 
 .header,
 .jobberfarenhet,
 .utbildning,
@@ -548,6 +549,37 @@ details[open] > summary::before{
 }
 details > summary:hover::before{
   border-left-color:#0b5bd3;
+}
+
+.referenser {
+  padding: 28px 36px;
+  border-top: 1px solid rgba(0,0,0,.06);
+}
+
+.referenser h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #004080;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.ref {
+  margin-bottom: 18px;
+}
+
+.ref h3 {
+  margin: 0 0 6px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+}
+
+.ref p {
+  margin: 0;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.5;
 }
 
 
