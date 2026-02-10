@@ -1,27 +1,419 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <meta charset="UTF-8">
-  <title>Hem</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>En sida – Grid mockup</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="index.html">Hem</a></li>
-      <li><a href="cv-personlig-brev.html">CV & Personligt brev</a></li>
-      <li><a href="projekt.html">Projekt</a></li>
-      <li><a href="kontakt.html">Kontakt</a></li>
-    </ul>
-  </nav>
-  <main>
-    <h1>Välkommen!</h1>
+  <div class="wrapper">
+    <div class="parent">      
+      <div class="header">
+        <div class="header-inner">
+          <img class="avatar" src="bilder/jagochmat1.JPG" alt="Delzar Kafashi">
+          <div class="info">
+            <h1>DELZAR KAFASHI</h1>
+            <p class="role">SYSTEMUTVECKLARE</p>
+            <ul class="contact">
+              <li>+46 70-922 40 98</li>
+              <li>Delzarkafashi@gmail.se</li>
+            </ul>
+          </div>
+        </div>
+        <nav class="menu">
+          <ul>
+            <li><a href="#jobberfarenhet">Jobberfarenhet</a></li>
+            <li><a href="#utbildning">Utbildning</a></li>
+            <li><a href="#egenskaper">Egenskaper</a></li>
+            <li><a href="#personligtbrev">Personligt brev</a></li>
+            <li><a href="#referenser">Referenser</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="jobberfarenhet" id="jobberfarenhet">
+        <h2>Jobberfarenhet</h2>
+        <div class="experience">
+          <span class="year">2025 – Pågående</span>
+          <div>
+            <h3>Cirkelledare – Studieförbundet</h3>
+            <ul>
+              <li>Skapar övningar, quiz och projektuppgifter inom webbutveckling och programmering</li>
+              <li>Bygger kursmaterial och kodexempel med tydlig struktur</li>
+              <li>Stöttar föreningar och företag med administrativa uppgifter</li>
+              <li>Hjälper till med IT och säkerhetsrelaterade frågor vid behov</li>
+              <li>Vägleder i hur man använder dator och smartphone på ett effektivt och säkert sätt</li>
+            </ul>
+          </div>
+        </div>
+      <div class="experience">
+        <span class="year">2014 – Pågående</span>
+        <div>
+          <h3>Stödassistent (LSS) – Kinda kommun</h3>
+          <ul>
+            <li>Lång erfarenhet av arbete med ansvar, struktur och kommunikation</li>
+            <li>Teamarbete, planering och hög noggrannhet</li>
+            <li>Van att arbeta under press och följa rutiner korrekt</li>
+          </ul>
+        </div>
+      </div>
+      <div class="experience">
+        <span class="year">Tidigare</span>
+        <div>
+          <h3>Egenföretagare – Restaurang</h3>
+          <ul>
+            <li>Ansvar för daglig drift, planering och kundservice</li>
+            <li>Ansvar för struktur, ledarskap och ekonomi</li>
+          </ul>
+        </div>
+      </div>
+        <!-- ===== PROJEKT ===== -->
+        <div class="projects" id="projekt">
+          <h2>Projekt</h2>
+        <div class="project">
+          <span class="year">2026 – Pågående</span>
+          <div>
+            <h3>
+              <a href="https://github.com/Delzarkafashi/Fullstack-Platform-ReactNative-TS" target="_blank" rel="noopener">
+                Fullstack Platform – React Native, React & Backend API
+              </a>
+            </h3>
 
-    <img src="bilder/delzar.jpg" alt="Bild på Delzar Kafashi" width="300">
+            <p>
+              Komplett fullstackprojekt med gemensam backend och databas.
+              Frontend är byggd i React Native med TypeScript för den offentliga informationsplattformen, samt i React (JavaScript) för det interna systemet Care Notes.
+              Backend är utvecklad i C# (.NET Web API) och kopplad till en SQL-databas (MySQL/PostgreSQL).
+              Projektet använder även GitHub Actions för CI, där build och integrationstester körs automatiskt vid push och pull request.
+            </p>
 
-    <p>Hej! Jag heter Delzar Kafashi och är utbildad som systemutvecklare. Jag tycker om att koda, för det är som att genom ord skapa liv. Varje steg i processen är spännande för man ser hur allt växer fram och blir till något större.</p>
+            <details>
+              <summary>Projektöversikt</summary>
+              <ul class="bullets">
+                <li>Offentlig informationsplattform (React Native, TypeScript, Expo)</li>
+                <li>Internt system – Care Notes (React, JavaScript)</li>
+                <li>Gemensam backend i C# (.NET Web API)</li>
+                <li>PostgreSQL-databas</li>
+                <li>Databasstyrt innehåll via API</li>
+                <li>CI med GitHub Actions, bygger och kör tester vid push och pull request</li>
+                <li>Grund för roller, behörigheter och inloggning</li>
+              </ul>
+            </details>
 
-    <p>Som ni ser på bilden så älskar jag mat 😉</p>
-  </main>
+            <details>
+              <summary>Struktur i repot</summary>
+              <ul class="bullets">
+                <li><strong>fronten/</strong> – React Native informationsplattform</li>
+                <li><strong>CareNotes/</strong> – internt React-system</li>
+                <li><strong>backend/</strong> – .NET Web API</li>
+                <li><strong>Api.IntegrationTests/</strong> – integrationstester</li>
+                <li><strong>.github/workflows/</strong> – GitHub Actions workflow för build och test</li>
+
+              </ul>
+            </details>
+
+            <p class="links">
+              <a class="proj-link" href="https://github.com/Delzarkafashi/Fullstack-Platform-ReactNative-TS" target="_blank" rel="noopener">
+                GitHub<span aria-hidden="true" class="ext">↗</span>
+              </a>
+            </p>
+          </div>
+        </div>
+          <!-- Frontend Del 1 -->
+          <div class="project">
+            <span class="year">2025</span>
+            <div>
+              <h3>
+                <a href="https://github.com/Delzarkafashi/Frontendutveckling-Del-1-Webbstruktur-och-interaktion" target="_blank" rel="noopener">
+                  Frontendutveckling – Del 1: Webbstruktur och interaktion
+                </a>
+              </h3>
+
+              <p>
+                Repository för kursens första 6 veckor, där fokus ligger på att bygga en stabil grund i HTML,
+                CSS och JavaScript. Kursen innehåller praktiska övningar, mini-projekt och ett avslutande grundprojekt,
+                med särskilt fokus på webbstruktur, interaktivitet och god kodpraxis.
+              </p>
+
+              <details>
+                <summary>Kort kursöversikt</summary>
+                <ul class="bullets">
+                  <li>HTML-struktur och semantik</li>
+                  <li>CSS (layout, Flexbox, Grid, responsiv design)</li>
+                  <li>JavaScript-grunder</li>
+                  <li>DOM-manipulation och events</li>
+                  <li>Strukturering av kod och filer</li>
+                  <li>Arbete med enklare datafiler</li>
+                </ul>
+              </details>
+
+              <p class="links">
+                <a class="proj-link" href="https://github.com/Delzarkafashi/Frontendutveckling-Del-1-Webbstruktur-och-interaktion" target="_blank" rel="noopener">
+                  GitHub<span aria-hidden="true" class="ext">↗</span>
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <!-- Frontend Del 2 -->
+          <div class="project">
+            <span class="year">2025</span>
+            <div>
+              <h3>
+                <a href="https://github.com/Delzarkafashi/Frontendutveckling-Del-2-Applikationslogik-och-interaktivitet" target="_blank" rel="noopener">
+                  Frontendutveckling – Del 2: Applikationslogik & interaktivitet
+                </a>
+              </h3>
+
+              <p>
+                Repository för kursens andra 6 veckor där studenten utvecklar ett komplett Snake-spel i JavaScript.
+                Kursen bygger vidare på del 1 och fokuserar på applikationslogik, objektorienterad struktur, rendering,
+                state-hantering och multiplayer – inklusive WebSocket och enklare serverutveckling i Node.js.
+              </p>
+
+              <details>
+                <summary>Kort kursöversikt</summary>
+                <ul class="bullets">
+                  <li>Applikationslogik i JavaScript</li>
+                  <li>Objektorienterad programmering (klasser och ansvar)</li>
+                  <li>Spel-loop, state och rendering</li>
+                  <li>Singleplayer- och multiplayerlogik</li>
+                  <li>LocalStorage för poäng och speldata</li>
+                  <li>WebSocket-kommunikation</li>
+                  <li>Enkel serverutveckling i Node.js</li>
+                </ul>
+              </details>
+
+              <p class="links">
+                <a class="proj-link" href="https://github.com/Delzarkafashi/Frontendutveckling-Del-2-Applikationslogik-och-interaktivitet" target="_blank" rel="noopener">
+                  GitHub<span aria-hidden="true" class="ext">↗</span>
+                </a>
+              </p>
+            </div>
+          </div>
+          <!-- Bootcamp -->
+          <div class="project">
+            <span class="year">2025</span>
+            <div>
+              <h3>
+                <a href="https://github.com/Delzarkafashi/Bootcamp-Fullstackutvecklare-Javascript" target="_blank" rel="noopener">
+                  Bootcamp för Fullstackutvecklare (HTML, CSS, JavaScript & Git)
+                </a>
+              </h3>
+
+              <p>
+                Introducerande bootcamp i webbutveckling med fokus på HTML, CSS, JavaScript och Git.
+                Kursen är praktiskt inriktad och avslutas med ett projekt där deltagaren bygger en personlig profil/CV-sida.
+                Syftet är att ge en stabil grund inom modern webbutveckling samt förståelse för hur utvecklare arbetar strukturerat och i team.
+              </p>
+
+              <details>
+                <summary>Kort kursöversikt</summary>
+                <ul class="bullets">
+                  <li>HTML, CSS och JavaScript – grunder och praktik</li>
+                  <li>Git och versionshantering</li>
+                  <li>Projektbaserat arbetssätt</li>
+                  <li>Kursplan + veckoplanering</li>
+                  <li>Slutprojekt: personlig profil/CV-sida</li>
+                </ul>
+              </details>
+
+              <details>
+                <summary>Struktur i repot</summary>
+                <ul class="bullets">
+                  <li><strong>Kursplan.md</strong> – övergripande information om kursens innehåll och mål</li>
+                  <li><strong>Veckoplanering/</strong> – detaljerad information vecka för vecka</li>
+                  <li><strong>Projekt/</strong> – instruktioner och material för profil/CV-projektet</li>
+                </ul>
+              </details>
+
+              <p class="links">
+                <a class="proj-link" href="https://github.com/Delzarkafashi/Bootcamp-Fullstackutvecklare-Javascript" target="_blank" rel="noopener">
+                  GitHub<span aria-hidden="true" class="ext">↗</span>
+                </a>
+              </p>
+            </div>
+          </div>
+          <!-- Grundkurs -->
+          <div class="project">
+            <span class="year">2025</span>
+            <div>
+              <h3>
+                <a href="https://github.com/Delzarkafashi/HTML-CSS-JavaScript-Nyborjarkurs" target="_blank" rel="noopener">
+                  Grundkurs i Webbutveckling – HTML, CSS & JavaScript
+                </a>
+              </h3>
+
+              <p>
+                Praktisk nybörjarkurs där deltagare bygger en komplett webbplats steg för steg.
+                Jag har skapat lektionsmaterial, övningar, mini-quiz och slutprojekt.
+              </p>
+
+              <details>
+                <summary>Kort kursöversikt</summary>
+                <ul class="bullets">
+                  <li>Planering & introduktion till webben</li>
+                  <li>Struktur, navigation & interna länkar</li>
+                  <li>Semantisk HTML för innehåll</li>
+                  <li>Design med CSS: färg, typografi, layout</li>
+                  <li>Interaktion med enkel JavaScript</li>
+                  <li>Mini-quiz varje lektion</li>
+                  <li>Slutprojekt: personlig webbplats</li>
+                </ul>
+              </details>
+
+              <p class="links">
+                <a class="proj-link" href="https://github.com/Delzarkafashi/HTML-CSS-JavaScript-Nyborjarkurs" target="_blank" rel="noopener">
+                  GitHub<span aria-hidden="true" class="ext">↗</span>
+                </a>
+              </p>
+            </div>
+          </div>
+
+        </div>
+        <!-- ===== SLUT PROJEKT ===== -->
+
+      </div>
+
+      <div class="utbildning" id="utbildning">
+        <h2>Utbildning</h2>
+
+        <div class="edu">
+          <span class="year">2025 – Pågående</span>
+          <div>
+            <h3>Fullstackutvecklare JavaScript</h3>
+            <p>
+              Pågående utbildning med fokus på JavaScript, Node.js, React, databaser och moderna webbramverk.
+              Startade september 2025.
+            </p>
+          </div>
+        </div>
+        <div class="edu">
+          <span class="year">2023 – 2025</span>
+          <div>
+            <h3>Systemutvecklare .NET – TUC Yrkeshögskola</h3>
+            <p>
+              Avslutad YH-utbildning med kurser inom bl.a. C#, .NET, databasutveckling,
+              webbutveckling, IT-säkerhet, test och UX. 
+              Innehöll även praktik (LIA) och examensarbete.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="egenskaper" id="egenskaper">
+        <h2>Egenskaper</h2>
+
+        <div class="egenskaper-grid">
+          <div class="col">
+            <h3>Kunskapsområden</h3>
+            <ul class="bullets">
+              <li>React (Vite, MUI m.m.)</li>
+              <li>React Native (Expo)</li>
+              <li>Kommunikation och affärsmannaskap</li>
+              <li>Programmering grund</li>
+              <li>JavaScript, TypeScript & HTML (webbutveckling)</li>
+              <li>Informationsarkitektur & databasutveckling</li>
+              <li>Programmering fördjupning (C# / .NET)</li>
+              <li>IT-säkerhet för utvecklare</li>
+              <li>Webbapplikationer & mobil utveckling</li>
+              <li>Publiceringsverktyg & UX</li>
+              <li>Test, verifiering & certifiering</li>
+              <li>Git & versionshantering</li>
+              <li>CI med GitHub Actions</li>
+              <li>.NET Web API</li>
+              <li>SQL-databaser (PostgreSQL)</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>Språk</h3>
+            <ul class="bullets">
+              <li>Svenska (Flytande)</li>
+              <li>Engelska (Flytande)</li>
+              <li>Kurdisk(a) (Flytande)</li>
+              <li>Persiska (Flytande)</li>
+              <li>Turkiska (Grundläggande)</li>
+              <li>Dari (Grundläggande)</li>
+              <li>Pashto (Grundläggande)</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>Kontakt</h3>
+            <ul class="contact-list">
+              <li>070-922 40 98</li>
+              <li><a href="mailto:Delzarkafashi@gmail.se">Delzarkafashi@gmail.se</a></li>
+              <li> Grönegatan 7<br>590 37 Kisa<br>Lägenhetsnummer 0901</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="referenser" id="referenser">
+        <h2>Referenser</h2>
+
+        <div class="ref">
+          <h3>Max Guclu</h3>
+          <p><strong>System Engineer</strong> | Grundare & VD, Comerit AB (Stockholm, Sverige)</p>
+          <p>E-post: <a href="mailto:max.guclu@chasacademy.se">max.guclu@chasacademy.se</a></p>
+          <p>Telefon: 0707369036</p>
+        </div>
+        <div class="ref">
+          <h3>Frida Amnéus</h3>
+          <p><strong>Verksamhetsutvecklare</strong>, Studieförbundet Vuxenskolan</p>
+          <p>E-post: <a href="mailto:frida.amneus@sv.se">frida.amneus@sv.se</a></p>
+          <p>Telefon: 013 327 28 34</p>
+        </div>
+        <div class="ref">
+          <h3>Torsten Lemon</h3>
+          <p><strong>Programansvarig</strong>, Chas Academy (Sverige)</p>
+          <p>E-post: <a href="mailto:torsten.lemon@chasacademy.se">torsten.lemon@chasacademy.se</a></p>
+        </div>
+      </div>
+
+      <div class="personligtbrev" id="personligtbrev">
+        <h2>Personligt brev</h2>
+        <p>
+          <p>Hej!</p>
+          Jag har ett stort intresse för systemutveckling.
+          Jag brinner för att lösa problem med kod och ser programmering som ett kreativt sätt
+          att bygga något meningsfullt. Att få se en idé växa fram till en fungerande applikation
+          är något jag verkligen tycker om.
+        </p>
+        <p>
+          Jag är nyfiken, självgående och gillar att lära mig nya tekniker. På fritiden
+          experimenterar jag gärna med små webbsidor eller fördjupar mig i JavaScript och hur man
+          bygger interaktiva funktioner.
+        </p>
+        <p>
+          Jag söker nu möjligheter att utvecklas inom IT och bidra med mina kunskaper i praktiska projekt.
+        </p>
+      </div>
+      <div class="sid1"></div>
+      <div class="sid2"></div>
+      <div class="sid3"></div>
+      <div class="sid4"></div>
+
+      <div class="sid5"></div>
+      <div class="sid6"></div>
+      <div class="sid7"></div>
+      <div class="sid8"></div>
+      <div class="sid9"></div> 
+      <div class="sid10"></div>
+    </div>
+  </div>
+  <button id="toTopBtn" title="Till toppen">⬆</button>
+  <script>
+let toTopBtn = document.getElementById("toTopBtn");
+
+window.onscroll = function() {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    toTopBtn.style.display = "block";
+  } else {
+    toTopBtn.style.display = "none";
+  }
+};
+
+toTopBtn.onclick = function() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+
 </body>
 </html>
